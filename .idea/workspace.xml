@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="766d230a-32b9-499d-bd98-9181637ac76e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Automation_W_DEX.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Automation_W_DEX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Automation_W_DEX.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,10 +34,141 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Python tests.pytest for test_availability.test_api_availability.executor": "Run",
+    "Python tests.pytest for test_availability.test_api_root_health.executor": "Run",
+    "Python tests.pytest for test_consistency.test_timeframe_consistency.executor": "Run",
+    "Python tests.pytest for test_data_structure.test_non_empty_data.executor": "Run",
+    "Python tests.pytest for test_data_structure.test_response_structure.executor": "Run",
+    "Python tests.pytest for test_date_validation.test_dates_ordered.executor": "Run",
+    "Python tests.pytest for test_date_validation.test_no_duplicate_dates.executor": "Run",
+    "Python tests.pytest for test_edge_cases.test_latest_data_timestamp.executor": "Run",
+    "Python tests.pytest for test_edge_cases.test_zero_volume_cases.executor": "Run",
+    "Python tests.pytest for test_inverse_pairs.test_inverse_pairs.executor": "Run",
+    "Python tests.pytest for test_pair_specific.test_ces_usdt_price_range.executor": "Run",
+    "Python tests.pytest for test_pair_specific.test_dai_usdt_price_range.executor": "Run",
+    "Python tests.pytest for test_pair_specific.test_pol_usdt_price_range.executor": "Run",
+    "Python tests.pytest for test_pair_specific.test_usdt_pol_price_range.executor": "Run",
+    "Python tests.pytest for test_price_validation.test_candle_validity.executor": "Run",
+    "Python tests.pytest for test_price_validation.test_price_ranges.executor": "Run",
+    "Python tests.pytest for test_timeframe_consistency.test_timeframe_consistency.executor": "Run",
+    "Python tests.pytest for test_volume_validation.test_volume_positive.executor": "Run",
+    "Python.conftest.executor": "Run",
+    "Python.fetch.executor": "Run",
+    "Python.parse.executor": "Run",
+    "Python.test_availability.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Репозитории/MetaWhale/Automation_W_DEX",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX\tests\basic" />
+      <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX\tests" />
+      <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.pytest for test_inverse_pairs.test_inverse_pairs">
+    <configuration name="pytest for test_date_validation.test_no_duplicate_dates" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Automation_W_DEX" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/validation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_date_validation.test_no_duplicate_dates&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_inverse_pairs.test_inverse_pairs" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Automation_W_DEX" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/consistency" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_inverse_pairs.test_inverse_pairs&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_price_validation.test_candle_validity" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Automation_W_DEX" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/validation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_price_validation.test_candle_validity&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_price_validation.test_price_ranges" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Automation_W_DEX" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/validation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_price_validation.test_price_ranges&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_volume_validation.test_volume_positive" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Automation_W_DEX" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/validation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_volume_validation.test_volume_positive&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for test_inverse_pairs.test_inverse_pairs" />
+        <item itemvalue="Python tests.pytest for test_volume_validation.test_volume_positive" />
+        <item itemvalue="Python tests.pytest for test_price_validation.test_candle_validity" />
+        <item itemvalue="Python tests.pytest for test_price_validation.test_price_ranges" />
+        <item itemvalue="Python tests.pytest for test_date_validation.test_no_duplicate_dates" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

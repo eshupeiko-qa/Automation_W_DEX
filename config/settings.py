@@ -1,0 +1,16 @@
+"""Конфигурационные параметры для тестирования API"""
+
+BASE_URL = "https://dev-graphback.w-dex.ai"
+
+# Пустая строка для 1d, так как по умолчанию используется основной эндпоинт без указания таймфрейма
+TIMEFRAMES = ["", "1w", "4h", "1h", "15m"]
+
+PAIRS = [
+    "POL-USDT", "USDT-POL", "POL-DAI", "DAI-POL",
+    "POL-CES", "CES-POL", "DAI-USDT", "USDT-DAI",
+    "CES-USDT", "USDT-CES", "CES-DAI", "DAI-CES"
+]
+
+# Настройки таймаутов и других параметров
+REQUEST_TIMEOUT = 10
+MIN_DATA_POINTS = 5  # Минимальное количество точек данных для валидных тестов
