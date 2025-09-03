@@ -1,4 +1,4 @@
-#Тесты для проверки обратных пар
+#Тест для проверки обратных пар
 
 import pytest
 from utils.api_helpers import fetch_data, get_inverse_pair
@@ -7,8 +7,10 @@ from config.settings import PAIRS
 
 @pytest.mark.consistency
 @pytest.mark.parametrize("pair", [p for p in PAIRS if "-" in p and get_inverse_pair(p) in PAIRS])
+
+#Проверка, что обратные пары имеют обратные цены:
 def test_inverse_pairs(pair):
-    """Проверяет, что обратные пары имеют обратные цены"""
+
     inverse_pair = get_inverse_pair(pair)
 
     # Получаем данные для обеих пар с таймфреймом 1d

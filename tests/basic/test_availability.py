@@ -3,7 +3,7 @@
 import pytest
 from utils.api_helpers import fetch_data
 from config.settings import TIMEFRAMES, PAIRS
-
+import time
 
 @pytest.mark.api
 @pytest.mark.parametrize("pair", PAIRS)
@@ -17,3 +17,4 @@ def test_api_availability(pair, timeframe):
         f"API недоступен для {pair} с таймфреймом {timeframe}. "
         f"Статус код: {response.status_code}, Ответ: {response.text[:200]}"
     )
+    time.sleep(1.0)

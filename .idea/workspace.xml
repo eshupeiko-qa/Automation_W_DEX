@@ -6,11 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="766d230a-32b9-499d-bd98-9181637ac76e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/basic/test_availability.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/basic/test_availability.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/validation/test_price_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/validation/test_price_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/api_helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/basic/test_data_structure.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/basic/test_data_structure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/consistency/test_inverse_pairs.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/consistency/test_inverse_pairs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/consistency/test_timeframe_consistency.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/consistency/test_timeframe_consistency.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/special/test_edge_cases.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/special/test_edge_cases.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/validation/test_date_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/validation/test_date_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/validation/test_volume_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/validation/test_volume_validation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +46,10 @@
     "Python tests.pytest for test_availability.test_api_availability.executor": "Run",
     "Python tests.pytest for test_availability.test_api_root_health.executor": "Run",
     "Python tests.pytest for test_consistency.test_timeframe_consistency.executor": "Run",
+    "Python tests.pytest for test_data_structure.test_candle_structure.executor": "Run",
     "Python tests.pytest for test_data_structure.test_non_empty_data.executor": "Run",
     "Python tests.pytest for test_data_structure.test_response_structure.executor": "Run",
+    "Python tests.pytest for test_date_validation.test_date_format_and_range.executor": "Run",
     "Python tests.pytest for test_date_validation.test_dates_ordered.executor": "Run",
     "Python tests.pytest for test_date_validation.test_no_duplicate_dates.executor": "Run",
     "Python tests.pytest for test_edge_cases.test_latest_data_timestamp.executor": "Run",
@@ -57,6 +62,8 @@
     "Python tests.pytest for test_price_validation.test_candle_validity.executor": "Run",
     "Python tests.pytest for test_price_validation.test_price_ranges.executor": "Run",
     "Python tests.pytest for test_timeframe_consistency.test_timeframe_consistency.executor": "Run",
+    "Python tests.pytest for test_timeframe_consistency.test_timeframe_consistency_2_weeks.executor": "Run",
+    "Python tests.pytest for test_timeframe_consistency.test_timeframe_data_length_consistency.executor": "Run",
     "Python tests.pytest for test_volume_validation.test_volume_positive.executor": "Run",
     "Python.conftest.executor": "Run",
     "Python.fetch.executor": "Run",
@@ -79,38 +86,38 @@
       <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_availability.test_api_availability">
-    <configuration name="pytest for test_availability.test_api_availability" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest for test_volume_validation.test_volume_positive">
+    <configuration name="pytest for test_date_validation.test_date_format_and_range" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Automation_W_DEX" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/basic" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/validation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_availability.test_api_availability&quot;" />
+      <option name="_new_target" value="&quot;test_date_validation.test_date_format_and_range&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_inverse_pairs.test_inverse_pairs" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_date_validation.test_no_duplicate_dates" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Automation_W_DEX" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/consistency" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/validation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_inverse_pairs.test_inverse_pairs&quot;" />
+      <option name="_new_target" value="&quot;test_date_validation.test_no_duplicate_dates&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -167,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_availability.test_api_availability" />
-        <item itemvalue="Python tests.pytest for test_price_validation.test_price_ranges" />
-        <item itemvalue="Python tests.pytest for test_price_validation.test_candle_validity" />
-        <item itemvalue="Python tests.pytest for test_inverse_pairs.test_inverse_pairs" />
         <item itemvalue="Python tests.pytest for test_volume_validation.test_volume_positive" />
+        <item itemvalue="Python tests.pytest for test_price_validation.test_candle_validity" />
+        <item itemvalue="Python tests.pytest for test_price_validation.test_price_ranges" />
+        <item itemvalue="Python tests.pytest for test_date_validation.test_date_format_and_range" />
+        <item itemvalue="Python tests.pytest for test_date_validation.test_no_duplicate_dates" />
       </list>
     </recent_temporary>
   </component>

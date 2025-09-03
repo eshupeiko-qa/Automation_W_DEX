@@ -1,5 +1,5 @@
 #Функции валидации данных API:
-
+from datetime import datetime, timedelta
 
 def validate_candle_structure(candle):
     """Проверяет структуру одной свечи"""
@@ -55,3 +55,19 @@ def validate_date_format(date):
         return False, f"Дата вне разумного диапазона: {date}"
 
     return True, "OK"
+
+
+
+def get_timestamp_days_ago(days):
+    """Возвращает timestamp для указанного количества дней назад"""
+    return int((datetime.now() - timedelta(days=days)).timestamp())
+
+
+def align_to_week_boundary(timestamp):
+    """Выравнивает timestamp к началу недели (понедельник 00:00)"""
+    dt = datetime.fromtimestamp(timestamp)
+    # Переходим к началу недели (понедельник)
+    start_of_week = dt - timedelta(days=dt.weekday())
+    # Устанавливаем время на 00:00:00
+    start_of_week = start_of_week.replace(hour=0, minute=0, second=0, microsecond=0)
+    return int(start_of_week.timestamp())

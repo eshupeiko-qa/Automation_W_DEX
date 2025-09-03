@@ -1,14 +1,15 @@
-"""Тесты согласованности данных между разными таймфреймами"""
+#Тесты согласованности данных между разными таймфреймами:
 
 import pytest
 from utils.api_helpers import fetch_data, get_api_url
 from config.settings import TIMEFRAMES, PAIRS
+import time
 
 
 @pytest.mark.consistency
 @pytest.mark.parametrize("pair", PAIRS)
+#Проверяет, что данные для более длинных тайм фреймов содержат меньше записей за тот же период:
 def test_timeframe_consistency(pair):
-    """Проверяет, что данные для более длинных таймфреймов содержат меньше записей за тот же период"""
     # Получаем данные для всех таймфреймов
     data_by_timeframe = {}
     for timeframe in TIMEFRAMES:
@@ -51,50 +52,48 @@ def test_timeframe_consistency(pair):
                     f"Нарушена последовательность таймфреймов: {current_tf} имеет {counts[current_tf]} записей, "
                     f"{next_tf} имеет {counts[next_tf]} записей для {pair}"
                 )
+    time.sleep(0.5)
 
 
 @pytest.mark.consistency
 @pytest.mark.parametrize("pair", PAIRS)
-def test_timeframe_data_length_consistency(pair):
-    """Проверяет соотношение количества данных для разных таймфреймов"""
+#Проверяет согласованность данных на разных таймфреймах за двухнедельный период:
+def test_timeframe_consistency_2_weeks(pair):
     # Получаем данные для всех таймфреймов
-    data_lengths = {}
+    data_by_timeframe = {}
+
     for timeframe in TIMEFRAMES:
         response = fetch_data(pair, timeframe)
         if response.status_code == 200:
             data = response.json()
-            if isinstance(data, list):
-                data_lengths[timeframe] = len(data)
+            if isinstance(data, list) and len(data) > 0:
+                data_by_timeframe[timeframe] = data
 
-    # Проверяем соотношения только если есть данные для основных таймфреймов
-    if "" in data_lengths and "15m" in data_lengths:
-        ratio_1d_to_15m = data_lengths[""] / data_lengths["15m"]
-        # 1 день = 24 часа = 96 интервалов по 15 минут
-        assert 0.8 <= ratio_1d_to_15m * 96 <= 1.2, (
-            f"Неправильное соотношение данных для 1d и 15m: {ratio_1d_to_15m}. "
-            f"Ожидалось ~0.0104 (1/96), получено {ratio_1d_to_15m}"
-        )
+    # Проверяем, что есть данные для недельного таймфрейма
+    if "1w" not in data_by_timeframe:
+        pytest.skip(f"Нет данных для таймфрейма 1w для пары {pair}")
 
-    if "1h" in data_lengths and "15m" in data_lengths:
-        ratio_1h_to_15m = data_lengths["1h"] / data_lengths["15m"]
-        # 1 час = 4 интервала по 15 минут
-        assert 0.8 <= ratio_1h_to_15m * 4 <= 1.2, (
-            f"Неправильное соотношение данных для 1h и 15m: {ratio_1h_to_15m}. "
-            f"Ожидалось ~0.25 (1/4), получено {ratio_1h_to_15m}"
-        )
+    # Берем последнюю недельную свечу как отправную точку
+    weekly_data = data_by_timeframe["1w"]
+    if len(weekly_data) < 2:
+        pytest.skip(f"Недостаточно недельных данных для пары {pair}")
 
-    if "4h" in data_lengths and "1h" in data_lengths:
-        ratio_4h_to_1h = data_lengths["4h"] / data_lengths["1h"]
-        # 4 часа = 4 интервала по 1 часу
-        assert 0.8 <= ratio_4h_to_1h * 4 <= 1.2, (
-            f"Неправильное соотношение данных для 4h и 1h: {ratio_4h_to_1h}. "
-            f"Ожидалось ~0.25 (1/4), получено {ratio_4h_to_1h}"
-        )
+    # Определяем двухнедельный период на основе последних двух недельных свечей
+    last_week_candle = weekly_data[0]
+    prev_week_candle = weekly_data[1]
 
-    if "1w" in data_lengths and "" in data_lengths:
-        ratio_1w_to_1d = data_lengths["1w"] / data_lengths[""]
-        # 1 неделя = 7 дней
-        assert 0.8 <= ratio_1w_to_1d * 7 <= 1.2, (
-            f"Неправильное соотношение данных для 1w и 1d: {ratio_1w_to_1d}. "
-            f"Ожидалось ~0.142 (1/7), получено {ratio_1w_to_1d}"
-        )
+    period_start = prev_week_candle["date"]  # Начало двухнедельного периода
+    period_end = last_week_candle["date"] + 7 * 24 * 3600  # Конец двухнедельного периода
+
+    # Проверяем согласованность для каждого таймфрейма
+    expected_ratios = {
+        "15m": 672,  # 2 недели * 7 дней * 24 часа * 4 интервала по 15 минут
+        "1h": 336,  # 2 недели * 7 дней * 24 часа
+        "4h": 84,  # 2 недели * 7 дней * 6 интервалов по 4 часа
+        "": 14,  # 2 недели * 7 дней
+        "1w": 2  # 2 недели
+    }
+
+    for timeframe in TIMEFRAMES:
+        if timeframe not in data_by_timeframe:
+            continue

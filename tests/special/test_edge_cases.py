@@ -1,15 +1,17 @@
-"""Тесты крайних случаев и специальных ситуаций"""
+
+#Тесты крайних случаев и специальных ситуаций
 
 import pytest
 from utils.api_helpers import fetch_data
 from config.settings import PAIRS, TIMEFRAMES
-
+import time
 
 @pytest.mark.special
 @pytest.mark.parametrize("pair", PAIRS)
 @pytest.mark.parametrize("timeframe", TIMEFRAMES)
+#Проверка случаев с нулевым объемом
 def test_zero_volume_cases(pair, timeframe):
-    """Проверяет случаи с нулевым объемом"""
+
     response = fetch_data(pair, timeframe)
     assert response.status_code == 200
 
@@ -29,11 +31,13 @@ def test_zero_volume_cases(pair, timeframe):
                 f"Несоответствие цен при нулевом объеме в свече {i} для {pair}: "
                 f"open={open_price}, high={high}, low={low}, close={close}"
             )
+    time.sleep(1.0)
 
 
 @pytest.mark.special
+#Проверка, что самые свежие данные не слишком устарели:
 def test_latest_data_timestamp():
-    """Проверяет, что самые свежие данные не слишком устарели"""
+
     import time
 
     response = fetch_data("POL-USDT", "")
