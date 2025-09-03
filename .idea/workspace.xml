@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="766d230a-32b9-499d-bd98-9181637ac76e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Automation_W_DEX.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Automation_W_DEX.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/basic/test_availability.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/basic/test_availability.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/validation/test_price_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/validation/test_price_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/api_helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/api_helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +28,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="329AQ0ldQZTDiGSxjpllnlwp91Q" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -58,6 +63,7 @@
     "Python.parse.executor": "Run",
     "Python.test_availability.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Репозитории/MetaWhale/Automation_W_DEX",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
@@ -73,21 +79,21 @@
       <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_inverse_pairs.test_inverse_pairs">
-    <configuration name="pytest for test_date_validation.test_no_duplicate_dates" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest for test_availability.test_api_availability">
+    <configuration name="pytest for test_availability.test_api_availability" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Automation_W_DEX" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/validation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/basic" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_date_validation.test_no_duplicate_dates&quot;" />
+      <option name="_new_target" value="&quot;test_availability.test_api_availability&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -161,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_availability.test_api_availability" />
+        <item itemvalue="Python tests.pytest for test_price_validation.test_price_ranges" />
+        <item itemvalue="Python tests.pytest for test_price_validation.test_candle_validity" />
         <item itemvalue="Python tests.pytest for test_inverse_pairs.test_inverse_pairs" />
         <item itemvalue="Python tests.pytest for test_volume_validation.test_volume_positive" />
-        <item itemvalue="Python tests.pytest for test_price_validation.test_candle_validity" />
-        <item itemvalue="Python tests.pytest for test_price_validation.test_price_ranges" />
-        <item itemvalue="Python tests.pytest for test_date_validation.test_no_duplicate_dates" />
       </list>
     </recent_temporary>
   </component>

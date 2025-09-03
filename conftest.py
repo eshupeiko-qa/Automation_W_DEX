@@ -1,4 +1,5 @@
-"""Общие фикстуры и хуки для pytest"""
+
+# Общие фикстуры и хуки:
 
 import sys
 from pathlib import Path
@@ -8,7 +9,7 @@ import importlib.util
 current_file = Path(__file__).resolve()
 project_root = current_file.parent
 
-# Добавляем корневой каталог в sys.path, если его там еще нет
+# Добавляем корневой каталог в sys.path, если его там еще нет:
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
@@ -51,23 +52,25 @@ except ImportError:
 import pytest
 
 
-# Параметризованные фикстуры для пар и таймфреймов
+# Параметризованные фикстуры для пар и таймфреймов:
+
+# Фикстура для тестирования всех торговых пар:
 @pytest.fixture(params=PAIRS)
 def trading_pair(request):
-    """Фикстура для тестирования всех торговых пар"""
+
     return request.param
 
-
+# Фикстура для тестирования всех таймфреймов:
 @pytest.fixture(params=TIMEFRAMES)
 def timeframe(request):
-    """Фикстура для тестирования всех таймфреймов"""
+
     return request.param
 
 
-# Фикстура для получения данных API
+# Фикстура для получения данных API:
 @pytest.fixture
 def api_data(trading_pair, timeframe):
-    """Фикстура для получения данных API для тестов"""
+
     # Импортируем api_helpers
     try:
         from utils.api_helpers import fetch_data

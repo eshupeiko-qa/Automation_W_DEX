@@ -1,4 +1,4 @@
-"""Функции валидации данных API"""
+#Функции валидации данных API:
 
 
 def validate_candle_structure(candle):

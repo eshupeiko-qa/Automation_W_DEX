@@ -1,10 +1,11 @@
 """Тесты валидации цен в API"""
 
 import pytest
+
+from config.settings import TIMEFRAMES, PAIRS
 from utils.api_helpers import fetch_data
 from utils.validation import validate_candle_values
-from config.settings import TIMEFRAMES, PAIRS
-
+import time
 
 @pytest.mark.validation
 @pytest.mark.parametrize("pair", PAIRS)
@@ -27,7 +28,7 @@ def test_price_ranges(pair, timeframe):
             assert 0.000001 <= price_usd <= 1000000, (
                 f"Цена вне разумного диапазона: {price_usd} для {pair}"
             )
-
+    time.sleep(1.0)
 
 @pytest.mark.validation
 @pytest.mark.parametrize("pair", PAIRS)
