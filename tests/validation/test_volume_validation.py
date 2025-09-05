@@ -24,4 +24,4 @@ def test_volume_positive(pair, timeframe):
             pytest.fail(f"Ошибка преобразования volumeUSD в свече {i} для {pair}")
 
         assert volume >= 0, f"Отрицательный объем: {volume} в свече {i} для {pair}"
-    time.sleep(1.0)
+    time.sleep(1.5)

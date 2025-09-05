@@ -43,3 +43,4 @@ def test_candle_validity(pair, timeframe):
     for i, candle in enumerate(data):
         is_valid, message = validate_candle_values(candle)
         assert is_valid, f"Нарушение правил свечи {i} для {pair}: {message}"
+    time.sleep(1)

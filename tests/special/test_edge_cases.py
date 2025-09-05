@@ -31,7 +31,7 @@ def test_zero_volume_cases(pair, timeframe):
                 f"Несоответствие цен при нулевом объеме в свече {i} для {pair}: "
                 f"open={open_price}, high={high}, low={low}, close={close}"
             )
-    time.sleep(1.0)
+    time.sleep(1.5)
 
 
 @pytest.mark.special

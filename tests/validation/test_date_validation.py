@@ -6,6 +6,7 @@ from utils.api_helpers import fetch_data
 from utils.validation import validate_date_format
 from config.settings import TIMEFRAMES, PAIRS
 import time
+from datetime import datetime, timedelta
 
 @pytest.mark.validation
 @pytest.mark.parametrize("pair", PAIRS)
@@ -65,3 +66,5 @@ def test_date_format_and_range(pair, timeframe):
         is_valid, message = validate_date_format(date)
         assert is_valid, f"Ошибка в дате свечи {i} для {pair}: {message}"
     time.sleep(1.0)
+
+
