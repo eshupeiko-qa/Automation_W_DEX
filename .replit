@@ -38,13 +38,13 @@ args = "bash -c \"python -m pytest tests/ -v --tb=short -m 'not ui' --alluredir=
 name = "Test Report Viewer"
 author = "agent"
 
+[workflows.workflow.metadata]
+outputType = "webview"
+
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "python -m http.server 5000 --directory allure-report"
 waitForPort = 5000
-
-[workflows.workflow.metadata]
-outputType = "webview"
 
 [[ports]]
 localPort = 5000
