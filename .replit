@@ -6,3 +6,26 @@ packages = ["geckodriver"]
 
 [agent]
 expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Test Suite"
+
+[[workflows.workflow]]
+name = "Test Suite"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python -m pytest tests/ -v --tb=short"
+
+[workflows.workflow.metadata]
+outputType = "console"

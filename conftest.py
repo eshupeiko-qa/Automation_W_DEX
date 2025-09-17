@@ -105,11 +105,16 @@ def api_data(trading_pair, timeframe):
 
 from selenium import webdriver
 #Фикстура, запускающая dex для ui тестов:
-@pytest.fixture(autouse=True)
-def driver():
-    driver = webdriver.Chrome()
-    # Переходим на страницу swap:
-    driver.get('https://w-dex.ai')
-    driver.maximize_window()
-    yield driver  #закрыть драйвер после теста
-    driver.quit()
+@pytest.fixture(scope="function")
+def driver(request):
+    # Only start driver for UI tests (tests in tests/UI directory)
+    if "UI" in request.node.fspath.dirname:
+        driver = webdriver.Chrome()
+        # Переходим на страницу swap:
+        driver.get('https://w-dex.ai')
+        driver.maximize_window()
+        yield driver  #закрыть драйвер после теста
+        driver.quit()
+    else:
+        # For non-UI tests, just yield None
+        yield None
