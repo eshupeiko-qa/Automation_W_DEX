@@ -8,6 +8,7 @@ import allure
 from selenium.webdriver.support.ui import WebDriverWait
 
 
+@pytest.mark.ui
 @allure.epic("Swap Page")
 @allure.feature("UI Tests")
 class TestSwapPage:

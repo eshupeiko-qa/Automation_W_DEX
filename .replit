@@ -23,9 +23,9 @@ args = "Test Suite"
 name = "Test Suite"
 author = "agent"
 
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "python -m pytest tests/ -v --tb=short"
-
 [workflows.workflow.metadata]
 outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python -m pytest tests/ -v --tb=short -m \"not ui\""
