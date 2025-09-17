@@ -1,20 +1,20 @@
 import pytest
-from tests.pages.main_page import MainPage
+from tests.pages.pool_page import PoolPage
 import allure
 from selenium.webdriver.support.ui import WebDriverWait
 
 
 @pytest.mark.ui
-@allure.epic("Main Page")
+@allure.epic("Pool Page")
 @allure.feature("UI Tests")
-class TestMainPage:
+class TestPoolPage:
 
     @allure.story("Page Load")
-    @allure.title("Проверка загрузки главной страницы")
+    @allure.title("Проверка загрузки страницы пулов")
     def test_page_loads(self, driver):
-        """Проверяет, что главная страница загружается корректно"""
+        """Проверяет, что страница пулов загружается корректно"""
         driver.get("https://w-dex.ai/")
-        page = MainPage(driver)
+        page = PoolPage(driver)
         page.wait_for_page_load()
         
         assert "w-dex.ai" in driver.current_url
@@ -25,7 +25,7 @@ class TestMainPage:
     def test_logo_visibility(self, driver):
         """Проверяет, что логотип DEX отображается и кликабелен"""
         driver.get("https://w-dex.ai/")
-        page = MainPage(driver)
+        page = PoolPage(driver)
         
         assert page.is_logo_visible(), "Логотип DEX должен быть виден на странице"
         
@@ -38,7 +38,7 @@ class TestMainPage:
     def test_network_button_display(self, driver):
         """Проверяет отображение кнопки выбора сети"""
         driver.get("https://w-dex.ai/")
-        page = MainPage(driver)
+        page = PoolPage(driver)
         page.wait_for_page_load()
         
         assert page.is_network_button_visible(), "Кнопка сети должна быть видна"
@@ -52,7 +52,7 @@ class TestMainPage:
     def test_account_connection(self, driver):
         """Проверяет отображение данных подключенного аккаунта"""
         driver.get("https://w-dex.ai/")
-        page = MainPage(driver)
+        page = PoolPage(driver)
         page.wait_for_page_load()
         
         if page.is_account_connected():
@@ -71,7 +71,7 @@ class TestMainPage:
     def test_responsive_design(self, driver):
         """Проверяет адаптивность интерфейса для разных размеров экрана"""
         driver.get("https://w-dex.ai/")
-        page = MainPage(driver)
+        page = PoolPage(driver)
         page.wait_for_page_load()
         
         # Тестируем десктопный размер
@@ -89,7 +89,7 @@ class TestMainPage:
     def test_web3_components_presence(self, driver):
         """Проверяет наличие необходимых Web3 компонентов"""
         driver.get("https://w-dex.ai/")
-        page = MainPage(driver)
+        page = PoolPage(driver)
         page.wait_for_page_load()
         
         # Проверяем наличие Web3 модала
@@ -108,7 +108,7 @@ class TestMainPage:
         # Сначала переходим на другую страницу
         driver.get("https://w-dex.ai/swap")
         
-        page = MainPage(driver)
+        page = PoolPage(driver)
         
         # Кликаем по логотипу
         page.click_logo()
@@ -123,7 +123,7 @@ class TestMainPage:
     def test_page_structure(self, driver):
         """Проверяет основную структуру и элементы страницы"""
         driver.get("https://w-dex.ai/")
-        page = MainPage(driver)
+        page = PoolPage(driver)
         page.wait_for_page_load()
         
         # Проверяем заголовок страницы
