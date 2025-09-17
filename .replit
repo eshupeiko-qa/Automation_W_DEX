@@ -2,7 +2,7 @@ modules = ["python-3.11"]
 
 [nix]
 channel = "stable-25_05"
-packages = ["geckodriver"]
+packages = ["geckodriver", "allure"]
 
 [agent]
 expertMode = true
@@ -19,6 +19,10 @@ author = "agent"
 task = "workflow.run"
 args = "Test Suite"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Test Report Viewer"
+
 [[workflows.workflow]]
 name = "Test Suite"
 author = "agent"
@@ -28,4 +32,20 @@ outputType = "console"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python -m pytest tests/ -v --tb=short -m \"not ui\""
+args = "bash -c \"python -m pytest tests/ -v --tb=short -m 'not ui' --alluredir=allure-results && allure generate allure-results --clean -o allure-report\""
+
+[[workflows.workflow]]
+name = "Test Report Viewer"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python -m http.server 5000 --directory allure-report"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[ports]]
+localPort = 5000
+externalPort = 80

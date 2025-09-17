@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","11199","Кнопка Swap становится активной после ввода","tests.UI","Mon Sep 15 20:44:01 GMT 2025","failed","Mon Sep 15 20:44:12 GMT 2025","TestSwapPage","tests_swap","",""
+"","885","Ввод суммы в поле POL","tests.UI","Mon Sep 15 20:43:35 GMT 2025","passed","Mon Sep 15 20:43:36 GMT 2025","TestSwapPage","tests_swap","",""
+"","10929","Кнопка инверсии меняет направление обмена","tests.UI","Mon Sep 15 20:43:45 GMT 2025","broken","Mon Sep 15 20:43:56 GMT 2025","TestSwapPage","tests_swap","",""
+"","746","Переход на вкладку Pools","tests.UI","Mon Sep 15 20:44:17 GMT 2025","broken","Mon Sep 15 20:44:18 GMT 2025","TestSwapPage","tests_swap","",""
+"","729","Работа кнопки Max для POL","tests.UI","Mon Sep 15 20:43:40 GMT 2025","broken","Mon Sep 15 20:43:41 GMT 2025","TestSwapPage","tests_swap","",""
+"","11731","Проверка загрузки страницы Swap","tests.UI","Mon Sep 15 20:43:18 GMT 2025","broken","Mon Sep 15 20:43:30 GMT 2025","TestSwapPage","tests_swap","",""
