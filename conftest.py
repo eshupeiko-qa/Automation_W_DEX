@@ -1,6 +1,6 @@
 
 # Общие фикстуры и хуки:
-
+import pytest
 import sys
 from pathlib import Path
 import importlib.util
@@ -66,7 +66,6 @@ def timeframe(request):
 
     return request.param
 
-
 # Фикстура для получения данных API:
 @pytest.fixture
 def api_data(trading_pair, timeframe):
@@ -100,3 +99,14 @@ def api_data(trading_pair, timeframe):
         "timeframe": timeframe,
         "data": data
     }
+
+from selenium import webdriver
+#Фикстура, запускающая dex для ui тестов:
+@pytest.fixture(autouse=True)
+def driver():
+    driver = webdriver.Chrome()
+    # Переходим на страницу swap:
+    driver.get('https://w-dex.ai')
+    driver.maximize_window()
+    yield driver  #закрыть драйвер после теста
+    driver.quit()

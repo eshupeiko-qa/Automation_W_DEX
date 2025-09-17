@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="766d230a-32b9-499d-bd98-9181637ac76e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/UI/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/special/test_edge_cases.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/special/test_edge_cases.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/validation/test_date_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/validation/test_date_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/validation/test_price_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/validation/test_price_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/validation/test_volume_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/validation/test_volume_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,50 +33,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "Python tests.pytest for test_availability.test_api_availability.executor": "Run",
-    "Python tests.pytest for test_availability.test_api_root_health.executor": "Run",
-    "Python tests.pytest for test_consistency.test_timeframe_consistency.executor": "Run",
-    "Python tests.pytest for test_data_structure.test_candle_structure.executor": "Run",
-    "Python tests.pytest for test_data_structure.test_non_empty_data.executor": "Run",
-    "Python tests.pytest for test_data_structure.test_response_structure.executor": "Run",
-    "Python tests.pytest for test_date_validation.test_candle_dates_consistency.executor": "Run",
-    "Python tests.pytest for test_date_validation.test_date_format_and_range.executor": "Run",
-    "Python tests.pytest for test_date_validation.test_dates_ordered.executor": "Run",
-    "Python tests.pytest for test_date_validation.test_no_duplicate_dates.executor": "Run",
-    "Python tests.pytest for test_edge_cases.test_latest_data_timestamp.executor": "Run",
-    "Python tests.pytest for test_edge_cases.test_zero_volume_cases.executor": "Run",
-    "Python tests.pytest for test_inverse_pairs.test_inverse_pairs.executor": "Run",
-    "Python tests.pytest for test_pair_specific.test_ces_usdt_price_range.executor": "Run",
-    "Python tests.pytest for test_pair_specific.test_dai_usdt_price_range.executor": "Run",
-    "Python tests.pytest for test_pair_specific.test_pol_usdt_price_range.executor": "Run",
-    "Python tests.pytest for test_pair_specific.test_usdt_pol_price_range.executor": "Run",
-    "Python tests.pytest for test_price_validation.test_candle_validity.executor": "Run",
-    "Python tests.pytest for test_price_validation.test_price_ranges.executor": "Run",
-    "Python tests.pytest for test_timeframe_consistency.test_timeframe_consistency.executor": "Run",
-    "Python tests.pytest for test_timeframe_consistency.test_timeframe_consistency_2_weeks.executor": "Run",
-    "Python tests.pytest for test_timeframe_consistency.test_timeframe_data_length_consistency.executor": "Run",
-    "Python tests.pytest for test_volume_validation.test_volume_positive.executor": "Run",
-    "Python.conftest.executor": "Run",
-    "Python.fetch.executor": "Run",
-    "Python.parse.executor": "Run",
-    "Python.test_availability.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Репозитории/MetaWhale/Automation_W_DEX",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Python tests.pytest for test_availability.test_api_availability.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_availability.test_api_root_health.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_consistency.test_timeframe_consistency.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_data_structure.test_candle_structure.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_data_structure.test_non_empty_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_data_structure.test_response_structure.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_date_validation.test_candle_dates_consistency.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_date_validation.test_date_format_and_range.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_date_validation.test_dates_ordered.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_date_validation.test_no_duplicate_dates.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_edge_cases.test_latest_data_timestamp.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_edge_cases.test_zero_volume_cases.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_inverse_pairs.test_inverse_pairs.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_pair_specific.test_ces_usdt_price_range.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_pair_specific.test_dai_usdt_price_range.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_pair_specific.test_pol_usdt_price_range.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_pair_specific.test_usdt_pol_price_range.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_price_validation.test_candle_validity.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_price_validation.test_price_ranges.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_timeframe_consistency.test_timeframe_consistency.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_timeframe_consistency.test_timeframe_consistency_2_weeks.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_timeframe_consistency.test_timeframe_data_length_consistency.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for test_volume_validation.test_volume_positive.executor&quot;: &quot;Run&quot;,
+    &quot;Python.conftest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fetch.executor&quot;: &quot;Run&quot;,
+    &quot;Python.parse.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_availability.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Репозитории/MetaWhale/Automation_W_DEX&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX\tests\basic" />
       <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX\tests" />
+      <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX\tests\basic" />
       <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX" />
     </key>
   </component>
