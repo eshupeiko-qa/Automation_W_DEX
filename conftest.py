@@ -17,7 +17,7 @@ if str(project_root) not in sys.path:
 # Функция для безопасного импорта модуля
 def import_module(module_name, path):
     spec = importlib.util.spec_from_file_location(module_name, path)
-    if spec is None:
+    if spec is None or spec.loader is None:
         raise ImportError(f"Не удалось создать спецификацию для модуля {module_name} по пути {path}")
     module = importlib.util.module_from_spec(spec)
     sys.modules[module_name] = module
@@ -43,7 +43,9 @@ except ImportError:
             if str(config_path) not in sys.path:
                 sys.path.insert(0, str(config_path))
             try:
-                from settings import PAIRS, TIMEFRAMES
+                import settings
+                PAIRS = settings.PAIRS
+                TIMEFRAMES = settings.TIMEFRAMES
             except ImportError:
                 raise ImportError("Не удалось импортировать настройки из config/settings.py") from None
     else:
@@ -84,7 +86,8 @@ def api_data(trading_pair, timeframe):
             if str(utils_path) not in sys.path:
                 sys.path.insert(0, str(utils_path))
             try:
-                from api_helpers import fetch_data
+                import api_helpers
+                fetch_data = api_helpers.fetch_data
             except ImportError:
                 raise ImportError("Файл utils/api_helpers.py не найден") from None
 

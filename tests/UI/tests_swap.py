@@ -5,6 +5,7 @@
 import pytest
 from tests.pages.swap_page import SwapPage
 import allure
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 @allure.epic("Swap Page")
