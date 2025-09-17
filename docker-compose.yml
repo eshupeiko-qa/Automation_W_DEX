@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  # API тесты (по умолчанию, без UI)
+  dex-api-tests:
+    build:
+      context: .
+      target: production
+    container_name: dex-api-tests
+    volumes:
+      - ./allure-results:/app/allure-results
+      - ./allure-report:/app/allure-report
+    environment:
+      - PYTHONPATH=/app
+    command: >
+      sh -c "python -m pytest tests/ -v --tb=short -m 'not ui' --alluredir=allure-results && 
+             allure generate allure-results --clean -o allure-report && 
+             echo 'Тесты завершены! Отчеты доступны в ./allure-report'"
+
+  # Полные тесты включая UI (требует Chrome)
+  dex-full-tests:
+    build:
+      context: .
+      target: full-testing
+    container_name: dex-full-tests
+    volumes:
+      - ./allure-results:/app/allure-results
+      - ./allure-report:/app/allure-report
+    environment:
+      - PYTHONPATH=/app
+      - DISPLAY=:99
+    command: >
+      sh -c "Xvfb :99 -screen 0 1920x1080x24 & 
+             python -m pytest tests/ -v --tb=short --alluredir=allure-results && 
+             allure generate allure-results --clean -o allure-report"
+    profiles:
+      - full
+
+  # Веб-сервер для просмотра отчетов
+  reports-server:
+    image: python:3.11-slim
+    container_name: dex-reports-server
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./allure-report:/app
+    working_dir: /app
+    command: python -m http.server 8000
+    depends_on:
+      - dex-api-tests
+    profiles:
+      - reports
+
+  # Интерактивная среда для отладки
+  debug:
+    build:
+      context: .
+      target: testing
+    container_name: dex-debug
+    volumes:
+      - .:/app
+      - ./allure-results:/app/allure-results
+      - ./allure-report:/app/allure-report
+    environment:
+      - PYTHONPATH=/app
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    profiles:
+      - debug
