@@ -1,51 +1,51 @@
-# DEX API Test Suite
+# Тестовый набор для DEX API
 
-## Overview
-This project is a comprehensive testing framework for a DEX (Decentralized Exchange) platform called W-DEX. The test suite includes both API tests and UI tests using Selenium WebDriver.
+## Обзор
+Данный проект представляет собой комплексную тестовую среду для децентрализованной биржи (DEX) под названием W-DEX. Тестовый набор включает в себя как тесты API, так и UI тесты с использованием Selenium WebDriver.
 
-## Project Structure
-- **config/**: Configuration files including API endpoints, timeframes, and trading pairs
-- **tests/**: Test modules organized by category
-  - **basic/**: Basic API availability and data structure tests
-  - **consistency/**: Tests for inverse pairs and timeframe consistency  
-  - **validation/**: Data validation tests (date, price, volume)
-  - **special/**: Edge cases and pair-specific tests
-  - **UI/**: Selenium-based user interface tests
-  - **pages/**: Page object models for UI tests
-- **utils/**: Helper utilities for API calls and data validation
-- **allure-results/**: Test reporting results directory
+## Структура проекта
+- **config/**: Файлы конфигурации, включающие API эндпоинты, временные интервалы и торговые пары
+- **tests/**: Тестовые модули, организованные по категориям
+  - **basic/**: Базовые тесты доступности API и структуры данных
+  - **consistency/**: Тесты обратных пар и консистентности временных интервалов
+  - **validation/**: Тесты валидации данных (дата, цена, объем)
+  - **special/**: Граничные случаи и тесты специфичные для пар
+  - **UI/**: Selenium-тесты пользовательского интерфейса
+  - **pages/**: Объектные модели страниц для UI тестов
+- **utils/**: Вспомогательные утилиты для API вызовов и валидации данных
+- **allure-results/**: Директория для результатов отчетов тестирования
 
-## Current State
-- ✅ Python 3.11 environment configured
-- ✅ All dependencies installed (pytest, requests, selenium, allure-pytest)
-- ✅ Test suite workflow configured and running
-- ✅ API tests verified working successfully
-- ✅ Import issues in conftest.py resolved
+## Текущее состояние
+- ✅ Настроена среда Python 3.11
+- ✅ Установлены все зависимости (pytest, requests, selenium, allure-pytest)
+- ✅ Настроен и запущен workflow тестового набора
+- ✅ API тесты успешно проверены и работают
+- ✅ Исправлены проблемы с импортами в conftest.py
 
-## Architecture
-**API Testing**: Tests are parameterized to run across multiple trading pairs and timeframes:
-- Trading pairs: POL-USDT, USDT-POL, POL-DAI, DAI-POL, POL-CES, CES-POL, DAI-USDT, USDT-DAI, CES-USDT, USDT-CES, CES-DAI, DAI-CES
-- Timeframes: 1d (default), 1w, 4h, 1h, 15m
-- Base URL: https://dev-graphback.w-dex.ai
+## Архитектура
+**Тестирование API**: Тесты параметризованы для выполнения по всем торговым парам и временным интервалам:
+- Торговые пары: POL-USDT, USDT-POL, POL-DAI, DAI-POL, POL-CES, CES-POL, DAI-USDT, USDT-DAI, CES-USDT, USDT-CES, CES-DAI, DAI-CES
+- Временные интервалы: 1d (по умолчанию), 1w, 4h, 1h, 15m
+- Базовый URL: https://dev-graphback.w-dex.ai
 
-**UI Testing**: Selenium-based tests for the swap interface at https://w-dex.ai
-- Note: UI tests are excluded by default in Replit environment due to Chrome WebDriver requirements
+**UI тестирование**: Selenium-тесты для интерфейса обмена на https://w-dex.ai
+- Примечание: UI тесты по умолчанию исключены в среде Replit из-за требований Chrome WebDriver
 
-## How to Run UI Tests
-UI tests are excluded by default but can be run with proper setup:
-1. **Requirements**: Chrome browser and ChromeDriver must be installed
-2. **Command**: `python -m pytest tests/ -v --tb=short -m ui`
-3. **Environment**: Not supported in standard Replit environment
-4. **Alternative**: Run API tests only with `python -m pytest tests/ -v --tb=short -m "not ui"` (default)
+## Как запустить UI тесты
+UI тесты исключены по умолчанию, но могут быть запущены при правильной настройке:
+1. **Требования**: Должны быть установлены браузер Chrome и ChromeDriver
+2. **Команда**: `python -m pytest tests/ -v --tb=short -m ui`
+3. **Среда**: Не поддерживается в стандартной среде Replit
+4. **Альтернатива**: Запуск только API тестов с `python -m pytest tests/ -v --tb=short -m "not ui"` (по умолчанию)
 
-## Recent Changes (September 17, 2025)
-- Set up Python 3.11 environment with required packages
-- Fixed import path issues in conftest.py to resolve LSP diagnostics
-- Modified WebDriver fixture to only run for UI tests to prevent conflicts with API tests
-- Created "Test Suite" workflow to run pytest with verbose output and short traceback
-- Verified API tests are running successfully and passing
+## Последние изменения (17 сентября 2025)
+- Настроена среда Python 3.11 с необходимыми пакетами
+- Исправлены проблемы с путями импорта в conftest.py для устранения LSP диагностики
+- Изменена фикстура WebDriver для запуска только для UI тестов во избежание конфликтов с API тестами
+- Создан workflow "Test Suite" для запуска pytest с подробным выводом и кратким трассировочным стеком
+- Проверено, что API тесты успешно запускаются и проходят
 
-## User Preferences
-- Console-based test execution preferred for this testing project
-- Comprehensive test coverage across all trading pairs and timeframes
-- Test results displayed with verbose output for debugging
+## Пользовательские предпочтения
+- Предпочтительно выполнение тестов через консоль для данного тестового проекта
+- Комплексное покрытие тестами всех торговых пар и временных интервалов
+- Результаты тестов отображаются с подробным выводом для отладки
