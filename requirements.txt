@@ -1,2 +1,4 @@
 pytest==8.2.2
 requests==2.32.3
+selenium
+allure-pytest
