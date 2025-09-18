@@ -37,6 +37,8 @@ pip install -r requirements.txt
 
 # Все API тесты
 pytest tests/ -v -m "not ui"
+# Все UI тесты
+python -m pytest tests/ -v -m ui
 # С UI тестами (нужен Chrome)
 pytest tests/ -v
 Сгенерировать отчет:

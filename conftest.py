@@ -109,6 +109,7 @@ from selenium import webdriver
 def driver(request):
     # Only start driver for UI tests (tests in tests/UI directory)
     if "UI" in request.node.fspath.dirname:
+
         driver = webdriver.Chrome()
         # Переходим на страницу swap:
         driver.get('https://w-dex.ai')
