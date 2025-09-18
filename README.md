@@ -9,8 +9,8 @@ Docker и Docker Compose
 Все тесты включая UI
 ./docker-scripts/run-tests.sh full
 Посмотреть отчеты:
-1. Запустить локальный сервер: python -m http.server 8080
-2. ./docker-scripts/run-tests.sh reports
+1. Сформировать отчет: ./docker-scripts/run-tests.sh reports
+2. Запустить локальный сервер: python -m http.server 8080
 3. Открыть в браузере http://localhost:8080/allure-report/
 
 Запуск отдельных тестов
