@@ -18,15 +18,15 @@ Docker и Docker Compose
 ./docker-scripts/run-tests.sh debug
 Внутри контейнера запустить:
 
-# Только базовые тесты доступности
+## Только базовые тесты доступности
 pytest tests/basic/ -v
-# Только тесты валидации 
+## Только тесты валидации
 pytest tests/validation/ -v
-# Тесты консистентности
+## Тесты консистентности
 pytest tests/consistency/ -v
-# Конкретный файл
+## Конкретный файл
 pytest tests/basic/test_availability.py -v
-# По маркерам
+## По маркерам
 pytest -m "validation" -v
 pytest -m "ui" -v
 Без Docker (если нужно)
@@ -35,11 +35,11 @@ pytest -m "ui" -v
 pip install -r requirements.txt
 Запустить тесты:
 
-# Все API тесты
+## Все API тесты
 pytest tests/ -v -m "not ui"
-# Все UI тесты
+## Все UI тесты
 python -m pytest tests/ -v -m ui
-# С UI тестами (нужен Chrome)
+## С UI тестами (нужен Chrome)
 pytest tests/ -v
 Сгенерировать отчет:
 
@@ -61,8 +61,8 @@ tests/pages/ - объекты страниц для UI тестов
 config/ - настройки торговых пар и эндпоинтов
 utils/ - вспомогательные функции
 Полезные команды
-# Помощь
+## Помощь
 ./docker-scripts/run-tests.sh help
-# Очистка Docker
+## Очистка Docker
 ./docker-scripts/run-tests.sh cleanup
 Отчеты сохраняются в allure-report/ после каждого запуска.
