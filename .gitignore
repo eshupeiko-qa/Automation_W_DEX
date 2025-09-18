@@ -1,3 +1,6 @@
 # created by virtualenv automatically
 .venv/
 
+/allure-results/
+/attached_assets/
+/allure-report/
