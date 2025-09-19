@@ -3,9 +3,9 @@
 import pytest
 from utils.api_helpers import fetch_data, get_inverse_pair
 from config.settings import PAIRS, TIMEFRAMES
+import time
 
-
-@pytest.mark.consistency
+'''@pytest.mark.consistency
 @pytest.mark.parametrize("pair", [p for p in PAIRS if "-" in p and get_inverse_pair(p) in PAIRS])
 
 #Проверка, что обратные пары имеют обратные цены (только для 1d):
@@ -53,20 +53,17 @@ def _get_inverse_test_pairs():
                 inverse_p = get_inverse_pair(p)
                 if inverse_p and inverse_p in PAIRS and p < inverse_p:
                     test_pairs.append((tf, p))
-    return test_pairs
+    return test_pairs'''
+
+
+#Проверка обратной пары на всех таймфреймах
 
 @pytest.mark.consistency
 @pytest.mark.parametrize("timeframe,pair", _get_inverse_test_pairs())
 
 #Проверка обратных пар для всех таймфреймов:
 def test_inverse_pairs_all_timeframes(timeframe, pair):
-    """
-    Проверяет, что обратные торговые пары имеют обратные цены 
-    для всех доступных таймфреймов.
-    
-    Например: если POL-USDT торгуется по цене 0.5 USD, 
-    то USDT-POL должен торговаться по цене ~2.0 USD
-    """
+
     from config.settings import MIN_DATA_POINTS
     
     inverse_pair = get_inverse_pair(pair)
@@ -149,3 +146,4 @@ def test_inverse_pairs_all_timeframes(timeframe, pair):
         f"Не найдено валидных цен для сравнения пар {pair} и {inverse_pair} "
         f"на таймфрейме {timeframe if timeframe else '1d'}"
     )
+    time.sleep(3)
