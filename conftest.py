@@ -25,11 +25,11 @@ def import_module(module_name, path):
     return module
 
 
-# Пытаемся импортировать настройки
+# Импортировать настройки
 try:
     from config.settings import PAIRS, TIMEFRAMES
 except ImportError:
-    # Пытаемся найти и импортировать вручную
+    # Найти и импортировать вручную
     settings_path = project_root / "config" / "settings.py"
     if settings_path.exists():
         try:
@@ -38,7 +38,7 @@ except ImportError:
             TIMEFRAMES = config_module.TIMEFRAMES
         except Exception as e:
             print(f"Ошибка при ручном импорте config.settings: {e}")
-            # Попробуем импортировать напрямую из config
+            # Импорт напрямую из config
             config_path = project_root / "config"
             if str(config_path) not in sys.path:
                 sys.path.insert(0, str(config_path))
@@ -72,7 +72,7 @@ def timeframe(request):
 @pytest.fixture
 def api_data(trading_pair, timeframe):
 
-    # Импортируем api_helpers
+    # Импорт. api_helpers
     try:
         from utils.api_helpers import fetch_data
     except ImportError:
@@ -81,7 +81,7 @@ def api_data(trading_pair, timeframe):
             utils_module = import_module("utils.api_helpers", str(api_helpers_path))
             fetch_data = utils_module.fetch_data
         else:
-            # Попробуем импортировать напрямую из utils
+            # Импорт. напрямую из utils
             utils_path = project_root / "utils"
             if str(utils_path) not in sys.path:
                 sys.path.insert(0, str(utils_path))
@@ -104,6 +104,7 @@ def api_data(trading_pair, timeframe):
     }
 
 from selenium import webdriver
+
 #Фикстура, запускающая dex для ui тестов:
 @pytest.fixture(scope="function")
 def driver(request):

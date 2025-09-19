@@ -11,6 +11,7 @@ import time
 @pytest.mark.structure
 @pytest.mark.parametrize("pair", PAIRS)
 @pytest.mark.parametrize("timeframe", TIMEFRAMES)
+
 #Провека структуры ответа API:
 
 def test_response_structure(pair, timeframe):

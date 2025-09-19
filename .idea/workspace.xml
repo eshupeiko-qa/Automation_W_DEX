@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="766d230a-32b9-499d-bd98-9181637ac76e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/basic/test_data_structure.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/basic/test_data_structure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/consistency/test_inverse_pairs.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/consistency/test_inverse_pairs.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,38 +93,55 @@
       <recent name="C:\Репозитории\MetaWhale\Automation_W_DEX" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_edge_cases.test_zero_volume_cases">
-    <configuration name="pytest for test_date_validation.test_date_format_and_range" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest for test_inverse_pairs.test_inverse_pairs">
+    <configuration name="pytest for test_availability.test_api_availability" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Automation_W_DEX" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/validation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/basic" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_date_validation.test_date_format_and_range&quot;" />
+      <option name="_new_target" value="&quot;test_availability.test_api_availability&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_edge_cases.test_latest_data_timestamp" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_data_structure.test_non_empty_data" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Automation_W_DEX" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/special" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/basic" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_edge_cases.test_latest_data_timestamp&quot;" />
+      <option name="_new_target" value="&quot;test_data_structure.test_non_empty_data&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_data_structure.test_response_structure" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Automation_W_DEX" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/basic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_data_structure.test_response_structure&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -143,24 +162,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_pair_specific.test_pol_usdt_price_range" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Automation_W_DEX" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/special" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pair_specific.test_pol_usdt_price_range&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_timeframe_consistency.test_timeframe_consistency_2_weeks" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_inverse_pairs.test_inverse_pairs" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Automation_W_DEX" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -173,17 +175,17 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_timeframe_consistency.test_timeframe_consistency_2_weeks&quot;" />
+      <option name="_new_target" value="&quot;test_inverse_pairs.test_inverse_pairs&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_inverse_pairs.test_inverse_pairs" />
+        <item itemvalue="Python tests.pytest for test_data_structure.test_non_empty_data" />
+        <item itemvalue="Python tests.pytest for test_data_structure.test_response_structure" />
+        <item itemvalue="Python tests.pytest for test_availability.test_api_availability" />
         <item itemvalue="Python tests.pytest for test_edge_cases.test_zero_volume_cases" />
-        <item itemvalue="Python tests.pytest for test_pair_specific.test_pol_usdt_price_range" />
-        <item itemvalue="Python tests.pytest for test_edge_cases.test_latest_data_timestamp" />
-        <item itemvalue="Python tests.pytest for test_timeframe_consistency.test_timeframe_consistency_2_weeks" />
-        <item itemvalue="Python tests.pytest for test_date_validation.test_date_format_and_range" />
       </list>
     </recent_temporary>
   </component>
